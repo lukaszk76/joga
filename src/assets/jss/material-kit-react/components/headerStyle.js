@@ -7,6 +7,7 @@ import {
   warningColor,
   dangerColor,
   roseColor,
+  grayColor,
   transition,
   boxShadow,
   drawerWidth,
@@ -72,7 +73,13 @@ const headerStyle = {
     backgroundColor: primaryColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)",
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(169, 183, 192, 0.46)",
+  },
+  gray: {
+    backgroundColor: grayColor,
+    color: "#FFFFFF",
+    boxShadow:
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(204, 200, 198, 0.46)",
   },
   info: {
     backgroundColor: infoColor,

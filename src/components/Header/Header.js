@@ -11,6 +11,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import Slide from "@material-ui/core/Slide";
+import { useScrollTrigger } from "@material-ui/core";
+
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -61,7 +64,11 @@ export default function Header(props) {
     [classes.fixed]: fixed,
   });
   const brandComponent = <Button className={classes.title}>{brand}</Button>;
+
+  const trigger = useScrollTrigger();
+
   return (
+    <Slide appear={false} direction="down" in={!trigger}>
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
@@ -104,6 +111,7 @@ export default function Header(props) {
         </Drawer>
       </Hidden>
     </AppBar>
+    </Slide>
   );
 }
 
@@ -122,6 +130,7 @@ Header.propTypes = {
     "white",
     "rose",
     "dark",
+    "gray"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -146,6 +155,7 @@ Header.propTypes = {
       "white",
       "rose",
       "dark",
+      "gray"
     ]).isRequired,
   }),
 };
