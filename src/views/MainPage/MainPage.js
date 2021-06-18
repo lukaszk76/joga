@@ -4,6 +4,8 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
+import { Element } from "react-scroll";
+
 // @material-ui/icons
 
 // core components
@@ -18,9 +20,12 @@ import Typography from "@material-ui/core/Typography";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import AboutTrainingsSection from "./Sections/AboutTrainingsSection.js";
+import AboutMeSection from "./Sections/AboutMeSection.js";
+import ContactUsSection from "./Sections/ContactUsSection.js";
+import AboutWorkshopsSection from "./Sections/AboutWorkshopsSection.js";
+import AboutStudioSection from "./Sections/AboutStudioSection.js";
+import TimeTableSection from "./Sections/TimeTableSection.js";
 
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -30,10 +35,10 @@ import logo from "assets/img/logo_small.jfif";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#A9B7C0",
+      main: "#595855",
     },
     secondary: {
-      main: '#C7DBC6',
+      main: '#A9B7C0',
     },
   },
 });
@@ -59,13 +64,15 @@ export default function MainPage(props) {
         // }}
         {...rest}
       />
+      
       <Parallax image={require("assets/img/joga.jpg").default}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={8}>
               <Typography variant="h3" style={{color:"#595855"}}>Kamila Watychowicz</Typography>
               <br/>
-              <Typography variant="h5" style={{color:"#595855"}}>Dla Ciebie i Twojego dziecka</Typography>
+              <Typography variant="h5" style={{color:"#595855"}}>Joga dla Ciebie i Twojego dziecka<br/><br/><br/></Typography>
+              
             </GridItem>
           </GridContainer>
           <a 
@@ -81,11 +88,34 @@ export default function MainPage(props) {
           </a>
         </div>
       </Parallax>
+     
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
-          <TeamSection />
-          <WorkSection />
+          
+          <Element name = "AboutTraining">
+            <AboutTrainingsSection />
+          </Element>
+          
+          <Element name = "AboutWorkshops">
+            <AboutWorkshopsSection />
+          </Element>
+
+          <Element name = "AboutStudio" >
+            <AboutStudioSection />
+          </Element>
+
+          <Element name = "TimeTable" >
+            <TimeTableSection />
+          </Element>
+
+          <Element name = "AboutMe">
+            <AboutMeSection />
+          </Element>
+
+          <Element name = "ContactUs">
+            <ContactUsSection />
+          </Element>
+          
         </div>
       </div>
       <Footer />
