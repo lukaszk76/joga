@@ -30,7 +30,7 @@ import TimeTableSection from "./Sections/TimeTableSection.js";
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-import logo from "assets/img/logo_small.jfif";
+import logo from "assets/img/logo.png";
 
 const theme = createMuiTheme({
   palette: {
@@ -53,9 +53,9 @@ export default function MainPage(props) {
   return (
     <ThemeProvider theme={theme}>
       <Header
-        color="gray"
+        color="transparent"
         routes={dashboardRoutes}
-        brand={<img src={logo} alt="logo"/>}
+        // brand={<img src={logo} alt="logo"/>}
         rightLinks={<HeaderLinks />}
         fixed
         // changeColorOnScroll={{
@@ -69,6 +69,7 @@ export default function MainPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={8}>
+              {/* <img src={logo} alt="logo"/> */}
               <Typography variant="h3" style={{color:"#595855"}}>Kamila Watychowicz</Typography>
               <br/>
               <Typography variant="h5" style={{color:"#595855"}}>Joga dla Ciebie i Twojego dziecka<br/><br/><br/></Typography>
@@ -91,6 +92,9 @@ export default function MainPage(props) {
      
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          
+          <br/><br/>
+          <center><img src={logo} alt="logo"/></center>
           
           <Element name = "AboutTraining">
             <AboutTrainingsSection />
