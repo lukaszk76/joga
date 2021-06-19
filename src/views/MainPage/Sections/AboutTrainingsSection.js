@@ -11,7 +11,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import { Typography } from "@material-ui/core";
-
+import logo from "assets/img/logo.png";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -21,8 +21,14 @@ export default function AboutTrainingsSection() {
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
+
+        <GridItem xs={12} sm={12} md={5}>
+          <img src={logo} alt="logo" width="100%" style={{marginBottom: "40px"}}/>
+        </GridItem>
+
         <GridItem xs={12} sm={12} md={8}>
-        <Typography variant = "h2" color="primary">Joga dla kobiet w ciąży</Typography>
+
+          <Typography variant = "h2" color="primary" style={{marginBottom: "40px"}}>O zajęciach</Typography>
           <Typography variant = "body1" color="primary">
             This is the paragraph where you can write more details about your
             product. Keep you user engaged by providing meaningful information.

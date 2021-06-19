@@ -30,8 +30,6 @@ import TimeTableSection from "./Sections/TimeTableSection.js";
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-import logo from "assets/img/logo.png";
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -92,9 +90,6 @@ export default function MainPage(props) {
      
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          
-          <br/><br/>
-          <center><img src={logo} alt="logo"/></center>
           
           <Element name = "AboutTraining">
             <AboutTrainingsSection />

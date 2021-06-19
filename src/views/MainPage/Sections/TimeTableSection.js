@@ -22,7 +22,7 @@ export default function TimeTableSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-        <Typography variant = "h2" color="primary">Grafik</Typography>
+        <Typography variant = "h2" color="primary" style={{marginBottom: "40px"}}>Grafik</Typography>
         <Typography variant = "body1" color="primary">
             This is the paragraph where you can write more details about your
             product. Keep you user engaged by providing meaningful information.

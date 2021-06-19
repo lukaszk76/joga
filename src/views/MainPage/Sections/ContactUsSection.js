@@ -21,7 +21,7 @@ export default function ContactUsSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-        <Typography variant = "h4" color="primary">Napisz do mnie</Typography>
+        <Typography variant = "h4" color="primary" style={{marginBottom: "40px"}}>Napisz do mnie</Typography>
           <Typography variant = "body1" color="primary">
             Divide details about your product or agency work into parts. Write a
             few lines about each one and contact us about any further
