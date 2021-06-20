@@ -35,7 +35,7 @@ function createData(name, monday, tuesday, wednesday, thursday, friday, saturday
 
 const rows = [
   createData('zajęcia w studio', "--:--", "11:00", "--:--", "11:00","--:--", "--:--", "--:--"),
-  createData('zajęcia on-line', "--:--", "--:--", "--:--", "--:--","10:00", "--:--", "--:--"),
+  createData('zajęcia on-line', "--:--", "--:--", "--:--", "--:--","??:??", "--:--", "--:--"),
 ];
 
 const useStyles = makeStyles({

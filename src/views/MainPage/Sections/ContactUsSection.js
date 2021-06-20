@@ -7,6 +7,7 @@ import sendMail from "support/sendMail";
 import RODOModal from "custom_components/RODOModal";
 // @material-ui/icons
 import Mail from "@material-ui/icons/Mail";
+import Phone from "@material-ui/icons/Phone";
 import Check from "@material-ui/icons/Check";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -93,12 +94,13 @@ export default function ContactUsSection() {
             Napisz do mnie
           </Typography>
           
-          {/* <Typography variant = "body1" color="primary">
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
-          </Typography> */}
+          <Typography variant = "body1" color="primary">
+            Możesz użyć poniższego formularza aby przesłać mi wiadomość. <br/><br/>
+            Jeśli wolisz możesz też do mnie zadzwonić lub napisać maila:
+          </Typography>
+          <Button href="tel:+48604153665"><Phone/>+48 604 153 665</Button>
+          <Button style={{marginLeft: "30px"}} href="mailto: kamilawatychowicz@gmail.com"><Mail/>kamilawatychowicz@gmail.com</Button>
+
           <form>
             <GridContainer>
 
@@ -153,7 +155,7 @@ export default function ContactUsSection() {
               </GridItem>
               <center>{notification}</center>
               <GridItem xs={12} sm={12} md={6}>
-                <Typography variant="caption" className={classes.description}>Klikając "Wyślij wiadomość" akceptujesz naszą{" "}
+                <Typography variant="caption" className={classes.description}>Klikając "Wyślij wiadomość" akceptujesz moją{" "}
                 <br/><span onClick={rodoClicked}><b>Politykę Prywatności</b></span><br/></Typography>
                 <FormControlLabel
                     control={
@@ -183,7 +185,7 @@ export default function ContactUsSection() {
                 </center>
                 <Button 
                   disabled={!reCAPTCHAverified}
-                  color="primary"
+                  // color="primary"
                   onClick={e => sendClicked(e)}
                   style={{marginTop: "15px"}}>
                     <Mail className={classes.icons} />
