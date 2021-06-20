@@ -56,10 +56,10 @@ export default function MainPage(props) {
         // brand={<img src={logo} alt="logo"/>}
         rightLinks={<HeaderLinks />}
         fixed
-        // changeColorOnScroll={{
-        //   height: 400,
-        //   // color: "gray",
-        // }}
+        changeColorOnScroll={{
+          height: 400,
+          color: "gray",
+        }}
         {...rest}
       />
       

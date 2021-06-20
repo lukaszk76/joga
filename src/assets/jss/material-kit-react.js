@@ -73,7 +73,8 @@ const primaryColor = "#A9B7C0";
 const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#C7DBC6";
-const infoColor = "#EFD9C1";
+// const infoColor = "#EFD9C1";
+const infoColor = "#80deea";
 const roseColor = "#e91e63";
 const grayColor = "#CCC8C6";
 
